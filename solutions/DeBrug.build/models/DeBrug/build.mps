@@ -1094,6 +1094,16 @@
             <ref role="3bR37D" to="ffeo:7iiyGQ7dLQL" resolve="jetbrains.mps.baseLanguage.jdk8" />
           </node>
         </node>
+        <node concept="1SiIV0" id="3pq2asIWGkp" role="3bR37C">
+          <node concept="3bR9La" id="3pq2asIWGlN" role="1SiIV1">
+            <ref role="3bR37D" to="90a9:29so9Vb$6Th" resolve="de.slisson.mps.tables" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3pq2asIWGoi" role="3bR37C">
+          <node concept="3bR9La" id="3pq2asIWGpI" role="1SiIV1">
+            <ref role="3bR37D" to="90a9:29so9Vb$6T5" resolve="de.slisson.mps.tables.runtime" />
+          </node>
+        </node>
         <node concept="1SiIV0" id="pj4I3ZUYTT" role="3bR37C">
           <node concept="3bR9La" id="pj4I3ZUYTU" role="1SiIV1">
             <property role="3bR36h" value="false" />
