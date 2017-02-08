@@ -12,6 +12,7 @@
   <property name="mbeddr.files" location="${basedir}/com.mbeddr.allInOne/mbeddr.core" />
   <property name="icon.files" location="${basedir}/icons" />
   <property name="image.files" location="${basedir}/images" />
+  <property name="DeBrug" location="${basedir}/../DeBrug" />
   <property name="artifacts.mpsStandalone" location="${mps_home}" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.mpsBuild" location="${mps_home}" />
@@ -324,33 +325,33 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Datum.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Datum" />
-      <fileset dir="${basedir}/languages/Datum" includes="icons/**, resources/**" />
-      <fileset dir="${basedir}/languages/Datum/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${DeBrug}/languages/Datum" includes="icons/**, resources/**" />
+      <fileset dir="${DeBrug}/languages/Datum/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/Datum.jar" />
     </jar>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Datum-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Datum#848775529194317175" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Datum-generator-template">
-      <fileset dir="${basedir}/languages/Datum/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Datum/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Datum-models">
-      <fileset dir="${basedir}/languages/Datum/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Datum/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Datum-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/Datum/generator/source_gen">
+      <fileset dir="${DeBrug}/languages/Datum/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <fileset dir="${basedir}/languages/Datum/source_gen">
+      <fileset dir="${DeBrug}/languages/Datum/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <zipfileset file="${basedir}/languages/Datum/Datum.mpl" prefix="module" />
+      <zipfileset file="${DeBrug}/languages/Datum/Datum.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Datum-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Datum-models" prefix="module/models" />
     </jar>
@@ -381,33 +382,33 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Gegevens.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Gegevens" />
-      <fileset dir="${basedir}/languages/Gegevens" includes="icons/**, resources/**" />
-      <fileset dir="${basedir}/languages/Gegevens/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${DeBrug}/languages/Gegevens" includes="icons/**, resources/**" />
+      <fileset dir="${DeBrug}/languages/Gegevens/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/Gegevens.jar" />
     </jar>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Gegevens-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Gegevens#6166301676793402228" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Gegevens-generator-template">
-      <fileset dir="${basedir}/languages/Gegevens/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Gegevens/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Gegevens-models">
-      <fileset dir="${basedir}/languages/Gegevens/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Gegevens/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Gegevens-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/Gegevens/generator/source_gen">
+      <fileset dir="${DeBrug}/languages/Gegevens/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <fileset dir="${basedir}/languages/Gegevens/source_gen">
+      <fileset dir="${DeBrug}/languages/Gegevens/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <zipfileset file="${basedir}/languages/Gegevens/Gegevens.mpl" prefix="module" />
+      <zipfileset file="${DeBrug}/languages/Gegevens/Gegevens.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Gegevens-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Gegevens-models" prefix="module/models" />
     </jar>
@@ -436,33 +437,33 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/SubjectiefRecht.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/SubjectiefRecht" />
-      <fileset dir="${basedir}/languages/SubjectiefRecht" includes="icons/**, resources/**" />
-      <fileset dir="${basedir}/languages/SubjectiefRecht/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${DeBrug}/languages/SubjectiefRecht" includes="icons/**, resources/**" />
+      <fileset dir="${DeBrug}/languages/SubjectiefRecht/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/SubjectiefRecht.jar" />
     </jar>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/SubjectiefRecht-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/SubjectiefRecht#7136310554705381513" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-SubjectiefRecht-generator-template">
-      <fileset dir="${basedir}/languages/SubjectiefRecht/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/SubjectiefRecht/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-SubjectiefRecht-models">
-      <fileset dir="${basedir}/languages/SubjectiefRecht/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/SubjectiefRecht/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/SubjectiefRecht-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/SubjectiefRecht/generator/source_gen">
+      <fileset dir="${DeBrug}/languages/SubjectiefRecht/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <fileset dir="${basedir}/languages/SubjectiefRecht/source_gen">
+      <fileset dir="${DeBrug}/languages/SubjectiefRecht/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <zipfileset file="${basedir}/languages/SubjectiefRecht/SubjectiefRecht.mpl" prefix="module" />
+      <zipfileset file="${DeBrug}/languages/SubjectiefRecht/SubjectiefRecht.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-SubjectiefRecht-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-SubjectiefRecht-models" prefix="module/models" />
     </jar>
@@ -478,6 +479,8 @@
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="dc038ceb-b7ea-4fea-ac12-55f7400e97ba(de.slisson.mps.editor.multiline.runtime)" />
+          <module ref="f0fff802-6d26-4d2e-b89d-391357265626(de.slisson.mps.hacks.editor)" />
+          <module ref="da21218f-a674-474d-8b4e-d59e33007003(de.slisson.mps.tables.runtime)" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
           <module ref="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" />
@@ -492,33 +495,33 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/ObjectiefRecht.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/ObjectiefRecht" />
-      <fileset dir="${basedir}/languages/GN" includes="icons/**, resources/**" />
-      <fileset dir="${basedir}/languages/GN/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${DeBrug}/languages/GN" includes="icons/**, resources/**" />
+      <fileset dir="${DeBrug}/languages/GN/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/ObjectiefRecht.jar" />
     </jar>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/ObjectiefRecht-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/ObjectiefRecht#6994217584621125733" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-GN-generator-template">
-      <fileset dir="${basedir}/languages/GN/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/GN/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-GN-models">
-      <fileset dir="${basedir}/languages/GN/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/GN/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/ObjectiefRecht-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/GN/generator/source_gen">
+      <fileset dir="${DeBrug}/languages/GN/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <fileset dir="${basedir}/languages/GN/source_gen">
+      <fileset dir="${DeBrug}/languages/GN/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <zipfileset file="${basedir}/languages/GN/ObjectiefRecht.mpl" prefix="module" />
+      <zipfileset file="${DeBrug}/languages/GN/ObjectiefRecht.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-GN-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-GN-models" prefix="module/models" />
     </jar>
@@ -547,33 +550,33 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Simulatie.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Simulatie" />
-      <fileset dir="${basedir}/languages/Simulatie" includes="icons/**, resources/**" />
-      <fileset dir="${basedir}/languages/Simulatie/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${DeBrug}/languages/Simulatie" includes="icons/**, resources/**" />
+      <fileset dir="${DeBrug}/languages/Simulatie/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/Simulatie.jar" />
     </jar>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Simulatie-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Simulatie#7812026954661547138" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Simulatie-generator-template">
-      <fileset dir="${basedir}/languages/Simulatie/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Simulatie/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Simulatie-models">
-      <fileset dir="${basedir}/languages/Simulatie/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Simulatie/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Simulatie-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/Simulatie/generator/source_gen">
+      <fileset dir="${DeBrug}/languages/Simulatie/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <fileset dir="${basedir}/languages/Simulatie/source_gen">
+      <fileset dir="${DeBrug}/languages/Simulatie/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <zipfileset file="${basedir}/languages/Simulatie/Simulatie.mpl" prefix="module" />
+      <zipfileset file="${DeBrug}/languages/Simulatie/Simulatie.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Simulatie-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Simulatie-models" prefix="module/models" />
     </jar>
@@ -586,6 +589,7 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
+          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
@@ -594,6 +598,8 @@
           <module ref="34e84b8f-afa8-4364-abcd-a279fddddbe7(jetbrains.mps.editor.runtime)" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" />
+          <module ref="528ff3b9-5fc4-40dd-931f-c6ce3650640e(jetbrains.mps.lang.migration.runtime)" />
+          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" />
           <module ref="8fe4c62a-2020-4ff4-8eda-f322a55bdc9f(jetbrains.mps.refactoring.runtime)" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
         </dependencies>
@@ -602,33 +608,33 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Interactie.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Interactie" />
-      <fileset dir="${basedir}/languages/Interactie" includes="icons/**, resources/**" />
-      <fileset dir="${basedir}/languages/Interactie/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${DeBrug}/languages/Interactie" includes="icons/**, resources/**" />
+      <fileset dir="${DeBrug}/languages/Interactie/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/Interactie.jar" />
     </jar>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Interactie-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Interactie#6166301676793402226" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Interactie-generator-template">
-      <fileset dir="${basedir}/languages/Interactie/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Interactie/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Interactie-models">
-      <fileset dir="${basedir}/languages/Interactie/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Interactie/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Interactie-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/Interactie/generator/source_gen">
+      <fileset dir="${DeBrug}/languages/Interactie/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <fileset dir="${basedir}/languages/Interactie/source_gen">
+      <fileset dir="${DeBrug}/languages/Interactie/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <zipfileset file="${basedir}/languages/Interactie/Interactie.mpl" prefix="module" />
+      <zipfileset file="${DeBrug}/languages/Interactie/Interactie.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Interactie-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Interactie-models" prefix="module/models" />
     </jar>
@@ -657,33 +663,33 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Integriteit.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Integriteit" />
-      <fileset dir="${basedir}/languages/Integriteit" includes="icons/**, resources/**" />
-      <fileset dir="${basedir}/languages/Integriteit/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${DeBrug}/languages/Integriteit" includes="icons/**, resources/**" />
+      <fileset dir="${DeBrug}/languages/Integriteit/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/Integriteit.jar" />
     </jar>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Integriteit-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/Integriteit#2282129504202752671" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Integriteit-generator-template">
-      <fileset dir="${basedir}/languages/Integriteit/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Integriteit/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-Integriteit-models">
-      <fileset dir="${basedir}/languages/Integriteit/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/Integriteit/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/Integriteit-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/Integriteit/generator/source_gen">
+      <fileset dir="${DeBrug}/languages/Integriteit/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <fileset dir="${basedir}/languages/Integriteit/source_gen">
+      <fileset dir="${DeBrug}/languages/Integriteit/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <zipfileset file="${basedir}/languages/Integriteit/Integriteit.mpl" prefix="module" />
+      <zipfileset file="${DeBrug}/languages/Integriteit/Integriteit.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Integriteit-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-Integriteit-models" prefix="module/models" />
     </jar>
@@ -697,21 +703,21 @@
     </echoxml>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/GN.sandbox.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/GN.sandbox" />
-      <fileset dir="${basedir}/languages/GN/sandbox" includes="icons/**, resources/**" />
-      <fileset dir="${basedir}/languages/GN/sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${DeBrug}/languages/GN/sandbox" includes="icons/**, resources/**" />
+      <fileset dir="${DeBrug}/languages/GN/sandbox/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/GN.sandbox.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-GN-sandbox-models">
-      <fileset dir="${basedir}/languages/GN/sandbox/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+      <fileset dir="${DeBrug}/languages/GN/sandbox/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.layout}/plugins/DeBrug/languages/DeBrug/GN.sandbox-src.jar" duplicate="preserve">
-      <fileset dir="${basedir}/languages/GN/sandbox/source_gen">
+      <fileset dir="${DeBrug}/languages/GN/sandbox/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
         <exclude name="**/checkpoints" />
         <exclude name="**/*.mps" />
       </fileset>
-      <zipfileset file="${basedir}/languages/GN/sandbox/GN.sandbox.msd" prefix="module" />
+      <zipfileset file="${DeBrug}/languages/GN/sandbox/GN.sandbox.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-GN-sandbox-models" prefix="module/models" />
     </jar>
     <mkdir dir="${build.layout}/plugins/mbeddr.core" />
@@ -855,16 +861,18 @@
       <library file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-3.0.0.zip/UI/languages/org.campagnelab.ui.code.jar" />
       <library file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-3.0.0.zip/UI/languages/org.campagnelab.ui.jar" />
       <chunk>
-        <module file="${basedir}/languages/Datum/Datum.mpl" />
-        <module file="${basedir}/languages/Gegevens/Gegevens.mpl" />
-        <module file="${basedir}/languages/Integriteit/Integriteit.mpl" />
-        <module file="${basedir}/languages/Interactie/Interactie.mpl" />
-        <module file="${basedir}/languages/GN/ObjectiefRecht.mpl" />
-        <module file="${basedir}/languages/Simulatie/Simulatie.mpl" />
-        <module file="${basedir}/languages/SubjectiefRecht/SubjectiefRecht.mpl" />
+        <module file="${DeBrug}/languages/Datum/Datum.mpl" />
+        <module file="${DeBrug}/languages/Gegevens/Gegevens.mpl" />
+        <module file="${DeBrug}/languages/Integriteit/Integriteit.mpl" />
+        <module file="${DeBrug}/languages/GN/ObjectiefRecht.mpl" />
+        <module file="${DeBrug}/languages/Simulatie/Simulatie.mpl" />
+        <module file="${DeBrug}/languages/SubjectiefRecht/SubjectiefRecht.mpl" />
       </chunk>
       <chunk>
-        <module file="${basedir}/languages/GN/sandbox/GN.sandbox.msd" />
+        <module file="${DeBrug}/languages/Interactie/Interactie.mpl" />
+      </chunk>
+      <chunk>
+        <module file="${DeBrug}/languages/GN/sandbox/GN.sandbox.msd" />
       </chunk>
       <jvmargs>
         <arg value="-Xmx512m" />
@@ -874,6 +882,7 @@
       <macro name="mbeddr.files" path="${mbeddr.files}" />
       <macro name="icon.files" path="${icon.files}" />
       <macro name="image.files" path="${image.files}" />
+      <macro name="DeBrug" path="${DeBrug}" />
     </generate>
   </target>
   
@@ -883,7 +892,7 @@
   
   <target name="makeDependents" />
   
-  <target name="compileJava" depends="java.compile.Datum, java.compile.Datum#848775529194317175, java.compile.Gegevens, java.compile.Gegevens#6166301676793402228, java.compile.SubjectiefRecht, java.compile.SubjectiefRecht#7136310554705381513, java.compile.ObjectiefRecht, java.compile.ObjectiefRecht#6994217584621125733, java.compile.Simulatie, java.compile.Simulatie#7812026954661547138, java.compile.Interactie, java.compile.Interactie#6166301676793402226, java.compile.Integriteit, java.compile.Integriteit#2282129504202752671, java.compile.GN.sandbox" />
+  <target name="compileJava" depends="java.compile.java.modules.cycle.1, java.compile.Datum, java.compile.Datum#848775529194317175, java.compile.Gegevens, java.compile.Gegevens#6166301676793402228, java.compile.SubjectiefRecht, java.compile.SubjectiefRecht#7136310554705381513, java.compile.ObjectiefRecht, java.compile.ObjectiefRecht#6994217584621125733, java.compile.Simulatie, java.compile.Simulatie#7812026954661547138, java.compile.Interactie, java.compile.Interactie#6166301676793402226, java.compile.Integriteit, java.compile.Integriteit#2282129504202752671, java.compile.GN.sandbox" />
   
   <target name="processResources" />
   
@@ -893,13 +902,75 @@
   
   <target name="check" depends="test" />
   
-  <target name="java.compile.Datum" depends="fetchDependencies">
-    <mkdir dir="${basedir}/languages/Datum/source_gen" />
+  <target name="java.compile.java.modules.cycle.1" depends="fetchDependencies">
+    <mkdir dir="${build.tmp}/java.modules.cycle.1" />
+    <javac destdir="${build.tmp}/java.modules.cycle.1" fork="true" encoding="utf8" nowarn="true" includeantruntime="false">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${DeBrug}/languages/Datum/source_gen" />
+        <path location="${DeBrug}/languages/Gegevens/source_gen" />
+        <path location="${DeBrug}/languages/GN/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-logging.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-messaging.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-boot-util.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/jdom.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/trove4j.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/xstream-1.4.8.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/diffutils-1.2.1.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/ecj-4.5.2.jar" />
+        <fileset dir="${artifacts.mpsStandalone}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/mps-tables/languages/mps-tables/de.slisson.mps.tables.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/mps-tables/languages/mps-tables/de.slisson.mps.tables.runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.jdk8.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.editor.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/mps-multiline/lib/diff_match_patch.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name="java.compile.Datum" depends="java.compile.java.modules.cycle.1, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/Datum/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Datum" />
     <javac destdir="${build.tmp}/java/out/Datum" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Datum/source_gen" />
+        <path location="${DeBrug}/languages/Datum/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -930,17 +1001,18 @@
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <pathelement path="${build.tmp}/java.modules.cycle.1" />
       </classpath>
     </javac>
   </target>
   
-  <target name="java.compile.Datum#848775529194317175" depends="java.compile.Datum, fetchDependencies">
-    <mkdir dir="${basedir}/languages/Datum/generator/source_gen" />
+  <target name="java.compile.Datum#848775529194317175" depends="java.compile.Datum, java.compile.Gegevens, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/Datum/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Datum#848775529194317175" />
     <javac destdir="${build.tmp}/java/out/Datum#848775529194317175" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Datum/generator/source_gen" />
+        <path location="${DeBrug}/languages/Datum/generator/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -960,6 +1032,7 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/Datum" />
+        <pathelement path="${build.tmp}/java/out/Gegevens" />
         <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/jdom.jar" />
@@ -976,13 +1049,13 @@
     </javac>
   </target>
   
-  <target name="java.compile.Gegevens" depends="java.compile.Datum, java.compile.ObjectiefRecht, fetchDependencies">
-    <mkdir dir="${basedir}/languages/Gegevens/source_gen" />
+  <target name="java.compile.Gegevens" depends="java.compile.java.modules.cycle.1, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/Gegevens/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Gegevens" />
     <javac destdir="${build.tmp}/java/out/Gegevens" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Gegevens/source_gen" />
+        <path location="${DeBrug}/languages/Gegevens/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1001,8 +1074,6 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
-        <pathelement path="${build.tmp}/java/out/Datum" />
-        <pathelement path="${build.tmp}/java/out/ObjectiefRecht" />
         <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/jdom.jar" />
@@ -1032,17 +1103,18 @@
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <pathelement path="${build.tmp}/java.modules.cycle.1" />
       </classpath>
     </javac>
   </target>
   
   <target name="java.compile.Gegevens#6166301676793402228" depends="java.compile.Gegevens, fetchDependencies">
-    <mkdir dir="${basedir}/languages/Gegevens/generator/source_gen" />
+    <mkdir dir="${DeBrug}/languages/Gegevens/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Gegevens#6166301676793402228" />
     <javac destdir="${build.tmp}/java/out/Gegevens#6166301676793402228" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Gegevens/generator/source_gen" />
+        <path location="${DeBrug}/languages/Gegevens/generator/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1078,13 +1150,13 @@
     </javac>
   </target>
   
-  <target name="java.compile.SubjectiefRecht" depends="java.compile.Datum, java.compile.ObjectiefRecht, fetchDependencies">
-    <mkdir dir="${basedir}/languages/SubjectiefRecht/source_gen" />
+  <target name="java.compile.SubjectiefRecht" depends="java.compile.Datum, java.compile.Gegevens, java.compile.ObjectiefRecht, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/SubjectiefRecht/source_gen" />
     <mkdir dir="${build.tmp}/java/out/SubjectiefRecht" />
     <javac destdir="${build.tmp}/java/out/SubjectiefRecht" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/SubjectiefRecht/source_gen" />
+        <path location="${DeBrug}/languages/SubjectiefRecht/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1104,6 +1176,7 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/Datum" />
+        <pathelement path="${build.tmp}/java/out/Gegevens" />
         <pathelement path="${build.tmp}/java/out/ObjectiefRecht" />
         <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
@@ -1122,12 +1195,12 @@
   </target>
   
   <target name="java.compile.SubjectiefRecht#7136310554705381513" depends="java.compile.SubjectiefRecht, fetchDependencies">
-    <mkdir dir="${basedir}/languages/SubjectiefRecht/generator/source_gen" />
+    <mkdir dir="${DeBrug}/languages/SubjectiefRecht/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/SubjectiefRecht#7136310554705381513" />
     <javac destdir="${build.tmp}/java/out/SubjectiefRecht#7136310554705381513" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/SubjectiefRecht/generator/source_gen" />
+        <path location="${DeBrug}/languages/SubjectiefRecht/generator/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1163,13 +1236,13 @@
     </javac>
   </target>
   
-  <target name="java.compile.ObjectiefRecht" depends="java.compile.Datum, fetchDependencies">
-    <mkdir dir="${basedir}/languages/GN/source_gen" />
+  <target name="java.compile.ObjectiefRecht" depends="java.compile.java.modules.cycle.1, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/GN/source_gen" />
     <mkdir dir="${build.tmp}/java/out/ObjectiefRecht" />
     <javac destdir="${build.tmp}/java/out/ObjectiefRecht" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/GN/source_gen" />
+        <path location="${DeBrug}/languages/GN/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1188,7 +1261,6 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
-        <pathelement path="${build.tmp}/java/out/Datum" />
         <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
         <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/mps-multiline/lib/diff_match_patch.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
@@ -1200,8 +1272,11 @@
         <fileset file="${artifacts.mpsStandalone}/lib/ecj-4.5.2.jar" />
         <fileset dir="${artifacts.mpsStandalone}/lib" includes="*.jar" />
         <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
         <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.jar" />
         <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.allInOne/com.mbeddr.allInOne.zip/plugins/mps-tables/languages/mps-tables/de.slisson.mps.tables.runtime.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
@@ -1217,17 +1292,18 @@
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <pathelement path="${build.tmp}/java.modules.cycle.1" />
       </classpath>
     </javac>
   </target>
   
-  <target name="java.compile.ObjectiefRecht#6994217584621125733" depends="java.compile.ObjectiefRecht, fetchDependencies">
-    <mkdir dir="${basedir}/languages/GN/generator/source_gen" />
+  <target name="java.compile.ObjectiefRecht#6994217584621125733" depends="java.compile.Gegevens, java.compile.ObjectiefRecht, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/GN/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/ObjectiefRecht#6994217584621125733" />
     <javac destdir="${build.tmp}/java/out/ObjectiefRecht#6994217584621125733" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/GN/generator/source_gen" />
+        <path location="${DeBrug}/languages/GN/generator/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1246,6 +1322,7 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/Gegevens" />
         <pathelement path="${build.tmp}/java/out/ObjectiefRecht" />
         <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
@@ -1263,13 +1340,13 @@
     </javac>
   </target>
   
-  <target name="java.compile.Simulatie" depends="java.compile.Datum, java.compile.ObjectiefRecht, java.compile.SubjectiefRecht, fetchDependencies">
-    <mkdir dir="${basedir}/languages/Simulatie/source_gen" />
+  <target name="java.compile.Simulatie" depends="java.compile.Datum, java.compile.Gegevens, java.compile.ObjectiefRecht, java.compile.SubjectiefRecht, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/Simulatie/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Simulatie" />
     <javac destdir="${build.tmp}/java/out/Simulatie" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Simulatie/source_gen" />
+        <path location="${DeBrug}/languages/Simulatie/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1289,6 +1366,7 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/Datum" />
+        <pathelement path="${build.tmp}/java/out/Gegevens" />
         <pathelement path="${build.tmp}/java/out/ObjectiefRecht" />
         <pathelement path="${build.tmp}/java/out/SubjectiefRecht" />
         <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
@@ -1308,13 +1386,13 @@
     </javac>
   </target>
   
-  <target name="java.compile.Simulatie#7812026954661547138" depends="java.compile.ObjectiefRecht, java.compile.Simulatie, java.compile.SubjectiefRecht, fetchDependencies">
-    <mkdir dir="${basedir}/languages/Simulatie/generator/source_gen" />
+  <target name="java.compile.Simulatie#7812026954661547138" depends="java.compile.Gegevens, java.compile.ObjectiefRecht, java.compile.Simulatie, java.compile.SubjectiefRecht, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/Simulatie/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Simulatie#7812026954661547138" />
     <javac destdir="${build.tmp}/java/out/Simulatie#7812026954661547138" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Simulatie/generator/source_gen" />
+        <path location="${DeBrug}/languages/Simulatie/generator/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1333,6 +1411,7 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/Gegevens" />
         <pathelement path="${build.tmp}/java/out/ObjectiefRecht" />
         <pathelement path="${build.tmp}/java/out/Simulatie" />
         <pathelement path="${build.tmp}/java/out/SubjectiefRecht" />
@@ -1352,13 +1431,13 @@
     </javac>
   </target>
   
-  <target name="java.compile.Interactie" depends="fetchDependencies">
-    <mkdir dir="${basedir}/languages/Interactie/source_gen" />
+  <target name="java.compile.Interactie" depends="java.compile.Gegevens, java.compile.ObjectiefRecht, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/Interactie/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Interactie" />
     <javac destdir="${build.tmp}/java/out/Interactie" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Interactie/source_gen" />
+        <path location="${DeBrug}/languages/Interactie/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1377,6 +1456,8 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/Gegevens" />
+        <pathelement path="${build.tmp}/java/out/ObjectiefRecht" />
         <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/jdom.jar" />
@@ -1394,12 +1475,12 @@
   </target>
   
   <target name="java.compile.Interactie#6166301676793402226" depends="java.compile.Interactie, fetchDependencies">
-    <mkdir dir="${basedir}/languages/Interactie/generator/source_gen" />
+    <mkdir dir="${DeBrug}/languages/Interactie/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Interactie#6166301676793402226" />
     <javac destdir="${build.tmp}/java/out/Interactie#6166301676793402226" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Interactie/generator/source_gen" />
+        <path location="${DeBrug}/languages/Interactie/generator/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1436,12 +1517,12 @@
   </target>
   
   <target name="java.compile.Integriteit" depends="fetchDependencies">
-    <mkdir dir="${basedir}/languages/Integriteit/source_gen" />
+    <mkdir dir="${DeBrug}/languages/Integriteit/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Integriteit" />
     <javac destdir="${build.tmp}/java/out/Integriteit" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Integriteit/source_gen" />
+        <path location="${DeBrug}/languages/Integriteit/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1477,12 +1558,12 @@
   </target>
   
   <target name="java.compile.Integriteit#2282129504202752671" depends="java.compile.Integriteit, fetchDependencies">
-    <mkdir dir="${basedir}/languages/Integriteit/generator/source_gen" />
+    <mkdir dir="${DeBrug}/languages/Integriteit/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/Integriteit#2282129504202752671" />
     <javac destdir="${build.tmp}/java/out/Integriteit#2282129504202752671" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/Integriteit/generator/source_gen" />
+        <path location="${DeBrug}/languages/Integriteit/generator/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1518,13 +1599,13 @@
     </javac>
   </target>
   
-  <target name="java.compile.GN.sandbox" depends="java.compile.Datum, java.compile.ObjectiefRecht, java.compile.Simulatie, java.compile.SubjectiefRecht, fetchDependencies">
-    <mkdir dir="${basedir}/languages/GN/sandbox/source_gen" />
+  <target name="java.compile.GN.sandbox" depends="java.compile.Datum, java.compile.Gegevens, java.compile.ObjectiefRecht, java.compile.Simulatie, java.compile.SubjectiefRecht, fetchDependencies">
+    <mkdir dir="${DeBrug}/languages/GN/sandbox/source_gen" />
     <mkdir dir="${build.tmp}/java/out/GN.sandbox" />
     <javac destdir="${build.tmp}/java/out/GN.sandbox" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${basedir}/languages/GN/sandbox/source_gen" />
+        <path location="${DeBrug}/languages/GN/sandbox/source_gen" />
       </src>
       <classpath>
         <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
@@ -1544,6 +1625,7 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/Datum" />
+        <pathelement path="${build.tmp}/java/out/Gegevens" />
         <pathelement path="${build.tmp}/java/out/ObjectiefRecht" />
         <pathelement path="${build.tmp}/java/out/Simulatie" />
         <pathelement path="${build.tmp}/java/out/SubjectiefRecht" />
@@ -1564,20 +1646,20 @@
   </target>
   
   <target name="cleanSources">
-    <delete dir="${basedir}/languages/Datum/source_gen" />
-    <delete dir="${basedir}/languages/Gegevens/source_gen" />
-    <delete dir="${basedir}/languages/Integriteit/source_gen" />
-    <delete dir="${basedir}/languages/Interactie/source_gen" />
-    <delete dir="${basedir}/languages/GN/source_gen" />
-    <delete dir="${basedir}/languages/Simulatie/source_gen" />
-    <delete dir="${basedir}/languages/SubjectiefRecht/source_gen" />
-    <delete dir="${basedir}/languages/Datum/generator/source_gen" />
-    <delete dir="${basedir}/languages/GN/sandbox/source_gen" />
-    <delete dir="${basedir}/languages/Gegevens/generator/source_gen" />
-    <delete dir="${basedir}/languages/Integriteit/generator/source_gen" />
-    <delete dir="${basedir}/languages/Interactie/generator/source_gen" />
-    <delete dir="${basedir}/languages/GN/generator/source_gen" />
-    <delete dir="${basedir}/languages/Simulatie/generator/source_gen" />
-    <delete dir="${basedir}/languages/SubjectiefRecht/generator/source_gen" />
+    <delete dir="${DeBrug}/languages/Datum/source_gen" />
+    <delete dir="${DeBrug}/languages/Gegevens/source_gen" />
+    <delete dir="${DeBrug}/languages/Integriteit/source_gen" />
+    <delete dir="${DeBrug}/languages/GN/source_gen" />
+    <delete dir="${DeBrug}/languages/Simulatie/source_gen" />
+    <delete dir="${DeBrug}/languages/SubjectiefRecht/source_gen" />
+    <delete dir="${DeBrug}/languages/Datum/generator/source_gen" />
+    <delete dir="${DeBrug}/languages/Gegevens/generator/source_gen" />
+    <delete dir="${DeBrug}/languages/Integriteit/generator/source_gen" />
+    <delete dir="${DeBrug}/languages/Interactie/source_gen" />
+    <delete dir="${DeBrug}/languages/GN/generator/source_gen" />
+    <delete dir="${DeBrug}/languages/Simulatie/generator/source_gen" />
+    <delete dir="${DeBrug}/languages/SubjectiefRecht/generator/source_gen" />
+    <delete dir="${DeBrug}/languages/GN/sandbox/source_gen" />
+    <delete dir="${DeBrug}/languages/Interactie/generator/source_gen" />
   </target>
 </project>
