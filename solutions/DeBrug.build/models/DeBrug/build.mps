@@ -1219,6 +1219,18 @@
           <property role="3LESm3" value="bfcf1ce2-5fb1-4470-8cb6-9addfbf26415" />
           <property role="2GAjPV" value="false" />
         </node>
+        <node concept="1SiIV0" id="XSBwowaQST" role="3bR37C">
+          <node concept="3bR9La" id="XSBwowaQSU" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="XSBwowaQSV" role="3bR37C">
+          <node concept="3bR9La" id="XSBwowaQSW" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="al5i:5GUwywcVavP" resolve="com.mbeddr.mpsutil.interpreter" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="5G$Q5DDn41E" role="2G$12L">
         <property role="BnDLt" value="true" />
