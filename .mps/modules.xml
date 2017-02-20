@@ -7,6 +7,8 @@
       <modulePath path="$PROJECT_DIR$/../DeBrug/languages/Algemeen/Algemeen.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/../DeBrug/languages/Datum/Datum.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/../DeBrug/languages/GN/ObjectiefRecht.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/../DeBrug/languages/GN/runtime/GN.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/../DeBrug/languages/GN/sandbox/GN.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/../DeBrug/languages/Gegevens/Gegevens.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/../DeBrug/languages/Integriteit/Integriteit.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/../DeBrug/languages/Interactie/Interactie.mpl" folder="" />
