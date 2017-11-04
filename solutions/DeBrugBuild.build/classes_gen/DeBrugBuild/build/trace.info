@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <root nodeRef="r:c0a0aede-73be-472a-b74a-ca670e33136e(DeBrugBuild.build)/6844183469011660463">
+    <file name="DeBrugBuild.xml">
+      <unit id="6844183469011660463" at="1,0,1936,10" name="DeBrugBuild.build.DeBrugBuild" />
+    </file>
+  </root>
+  <root nodeRef="r:c0a0aede-73be-472a-b74a-ca670e33136e(DeBrugBuild.build)/6844183469011660653">
+    <file name="DeBrugBuildDistribution.xml">
+      <unit id="6844183469011660653" at="1,0,123,10" name="DeBrugBuild.build.DeBrugBuildDistribution" />
+    </file>
+  </root>
+</debug-info>
+
