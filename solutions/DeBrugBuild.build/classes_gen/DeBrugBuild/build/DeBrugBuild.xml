@@ -6,8 +6,8 @@
   <tstamp>
     <format property="date" pattern="yyyyMMdd" />
   </tstamp>
-  <property name="build.number" value="DeBrugBuild-171.SNAPSHOT" />
-  <property name="mps_home" location="${basedir}/../../../../Applications/MPS 2017.1.app/Contents" />
+  <property name="build.number" value="DeBrug-2017.2.3.SNAPSHOT" />
+  <property name="mps_home" location="${basedir}/../../../../Applications/MPS 2017.2.app/Contents" />
   <property name="imagespath" location="" />
   <property name="deBrug_home" location="${basedir}/../DeBrug" />
   <property name="mbeddr.platform" location="${basedir}/mbeddr.platform" />
